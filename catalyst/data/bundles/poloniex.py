@@ -172,8 +172,6 @@ def poloniex_cryptoassets(symbols, start=None, end=None):
                     sid += 1
 
 
-        daily_bar_writer.write(_pricing_iter())
-
         symbol_map = pd.Series(metadata.symbol.index, metadata.symbol)
 
         # Hardcode the exchange to "POLO" for all assets and (elsewhere)
@@ -181,6 +179,12 @@ def poloniex_cryptoassets(symbols, start=None, end=None):
         # all cryptoassets and thus use the OPEN calendar.
         metadata['exchange'] = 'POLO'
         asset_db_writer.write(equities=metadata)
+
+        daily_bar_writer.write(
+            _pricing_iter(),
+            assets=metadata.symbol,
+            show_progress=show_progress,
+        )
 
         adjustment_writer.write()
 
