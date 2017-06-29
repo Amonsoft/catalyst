@@ -162,7 +162,7 @@ def _filter_requirements(lines_iter, filter_names=None,
 
 REQ_UPPER_BOUNDS = {
     'bcolz': '<1',
-    'pandas': '<0.19',
+    'pandas': '<0.20'
 }
 
 
@@ -278,7 +278,7 @@ conditional_arguments = {
 }
 
 setup(
-    name='catalyst',
+    name='catalyst-hf',
     url='https://enigma.co',
     version=versioneer.get_version(),
     cmdclass=LazyBuildExtCommandClass(versioneer.get_cmdclass()),
