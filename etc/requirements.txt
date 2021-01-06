@@ -9,7 +9,7 @@ Logbook==0.12.5
 # Scientific Libraries
 
 pytz==2016.4
-numpy==1.11.1
+numpy==1.13.3
 
 # for pandas-datareader
 requests-file==1.4.1
@@ -62,7 +62,7 @@ multipledispatch==0.4.8
 MarkupSafe==0.23
 Mako==1.0.1
 # Asset writer and finder
-sqlalchemy==1.0.8
+sqlalchemy==1.2.18
 # For asset db management
 alembic==0.7.7
 
